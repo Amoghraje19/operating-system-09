@@ -1,0 +1,263 @@
+1. Simple Class and object:
+
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+    int width, height;
+public:
+    void set_values(int w, int h) {
+        width = w;
+        height = h;
+    }
+    int area() {
+        return width * height;
+    }
+};
+
+int main() {
+    Rectangle rect;
+    rect.set_values(5, 3);
+    cout << "Area: " << rect.area() << endl;
+    return 0;
+}
+
+
+2.Constructor and Destructor
+
+#include <iostream>
+using namespace std;
+
+class MyClass {
+public:
+    MyClass() {
+        cout << "Constructor called." << endl;
+    }
+    ~MyClass() {
+        cout << "Destructor called." << endl;
+    }
+};
+
+int main() {
+    MyClass obj;
+    return 0;
+}
+
+
+3.encapsulation
+
+#include <iostream>
+using namespace std;
+
+class EncapsulationExample {
+private:
+    int secret_value;
+public:
+    void setSecretValue(int value) {
+        secret_value = value;
+    }
+    int getSecretValue() {
+        return secret_value;
+    }
+};
+
+int main() {
+    EncapsulationExample obj;
+    obj.setSecretValue(42);
+    cout << "Secret Value: " << obj.getSecretValue() << endl;
+    return 0;
+}
+
+
+4. Inheritance:
+
+#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    void speak() {
+        cout << "Animal speaks!" << endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void speak() {
+        cout << "Dog barks!" << endl;
+    }
+};
+
+int main() {
+    Dog dog;
+    dog.speak(); // Output: Dog barks!
+    return 0;
+}
+
+
+5.  Polymorphism:
+
+#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    void speak() {
+        cout << "Animal speaks!" << endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void speak() {
+        cout << "Dog barks!" << endl;
+    }
+};
+
+int main() {
+    Dog dog;
+    dog.speak(); // Output: Dog barks!
+    return 0;
+}
+
+
+6.Function overloading:
+
+#include <iostream>
+using namespace std;
+
+class MathOperations {
+public:
+    int add(int a, int b) {
+        return a + b;
+    }
+    double add(double a, double b) {
+        return a + b;
+    }
+};
+
+int main() {
+    MathOperations obj;
+    cout << "Integer Addition: " << obj.add(5, 3) << endl;
+    cout << "Double Addition: " << obj.add(5.5, 3.3) << endl;
+    return 0;
+}
+
+
+7.operator overloading:
+
+#include <iostream>
+using namespace std;
+
+class Complex {
+private:
+    int real, imag;
+public:
+    Complex(int r = 0, int i = 0) : real(r), imag(i) {}
+    Complex operator + (const Complex &obj) {
+        Complex res;
+        res.real = real + obj.real;
+        res.imag = imag + obj.imag;
+        return res;
+    }
+    void display() {
+        cout << real << " + i" << imag << endl;
+    }
+};
+
+int main() {
+    Complex c1(3, 5), c2(2, 7);
+    Complex sum = c1 + c2;
+    sum.display();
+    return 0;
+}
+
+
+8.Static member:
+
+#include <iostream>
+using namespace std;
+
+class Example {
+public:
+    static int count;
+    Example() {
+        count++;
+    }
+    static void showCount() {
+        cout << "Count: " << count << endl;
+    }
+};
+
+int Example::count = 0;
+
+int main() {
+    Example obj1, obj2, obj3;
+    Example::showCount(); // Output: Count: 3
+    return 0;
+}
+
+9. friend functionj:
+
+#include <iostream>
+using namespace std;
+
+class MyClass {
+private:
+    int secret_value;
+public:
+    MyClass(int value) : secret_value(value) {}
+    friend void displaySecretValue(MyClass obj);
+};
+
+void displaySecretValue(MyClass obj) {
+    cout << "Secret Value: " << obj.secret_value << endl;
+}
+
+int main() {
+    MyClass obj(42);
+    displaySecretValue(obj); // Output: Secret Value: 42
+    return 0;
+}
+
+
+10. nested class:
+
+#include <iostream>
+using namespace std;
+
+class Outer {
+private:
+    int outer_value;
+public:
+    class Inner {
+    private:
+        int inner_value;
+    public:
+        void setInnerValue(int value) {
+            inner_value = value;
+        }
+        int getInnerValue() {
+            return inner_value;
+        }
+    };
+    void setOuterValue(int value) {
+        outer_value = value;
+    }
+    int getOuterValue() {
+        return outer_value;
+    }
+};
+
+int main() {
+    Outer obj;
+    Outer::Inner innerObj;
+    obj.setOuterValue(10);
+    innerObj.setInnerValue(20);
+    cout << "Outer Value: " << obj.getOuterValue() << endl;
+    cout << "Inner Value: " << innerObj.getInnerValue() << endl;
+    return 0;
+}
+
+
+
