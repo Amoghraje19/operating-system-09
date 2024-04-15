@@ -1,0 +1,84 @@
+Sure, here are 20 commonly used Unix commands along with explanations and examples:
+
+1. **ls** - List directory contents.
+   - **Execution**: `ls [options] [directory]`
+   - **Example**: `ls -l` (lists detailed information about files and directories)
+
+2. **cd** - Change directory.
+   - **Execution**: `cd [directory]`
+   - **Example**: `cd Documents` (changes the current directory to Documents)
+
+3. **pwd** - Print working directory.
+   - **Execution**: `pwd`
+   - **Example**: `pwd` (prints the current working directory)
+
+4. **mkdir** - Make directory.
+   - **Execution**: `mkdir [directory]`
+   - **Example**: `mkdirnew_folder` (creates a new directory named new_folder)
+
+5. **rm** - Remove files or directories.
+   - **Execution**: `rm [options] [file/directory]`
+   - **Example**: `rm file.txt` (removes the file named file.txt)
+
+6. **cp** - Copy files or directories.
+   - **Execution**: `cp [options] source destination`
+   - **Example**: `cp file.txt backup/file.txt` (copies file.txt to the backup directory)
+
+7. **mv** - Move files or directories.
+   - **Execution**: `mv [options] source destination`
+   - **Example**: `mv file.txt Documents/file.txt` (moves file.txt to the Documents directory)
+
+8. **cat** - Concatenate and display file(s) content.
+   - **Execution**: `cat [file]`
+   - **Example**: `cat file.txt` (displays the contents of file.txt)
+
+9. **grep** - Search for patterns in files.
+   - **Execution**: `grep [options] pattern [file]`
+   - **Example**: `grep "hello" file.txt` (searches for the word "hello" in file.txt)
+
+10. **chmod** - Change file permissions.
+    - **Execution**: `chmod [options] mode file`
+    - **Example**: `chmod +x script.sh` (adds execute permission to script.sh)
+
+11. **chown** - Change file owner and group.
+    - **Execution**: `chown [options] owner:group file`
+    - **Example**: `chownuser:group file.txt` (changes the owner and group of file.txt)
+
+12. **tar** - Tape Archive, used for compression and archiving.
+    - **Execution**: `tar [options] file(s)`
+    - **Example**: `tar -cvfarchive.tar file1 file2` (creates a tar archive of file1 and file2)
+
+13. **wget** - Downloads files from the internet.
+    - **Execution**: `wget [options] URL`
+    - **Example**: `wget http://example.com/file.zip` (downloads file.zip from the given URL)
+
+14. **ssh** - Secure Shell, used for secure remote access.
+    - **Execution**: `ssh [user@]hostname`
+    - **Example**: `ssh user@example.com` (connects to example.com as user)
+
+15. **scp** - Secure copy, used for secure file transfer between hosts.
+    - **Execution**: `scp [options] source destination`
+    - **Example**: `scp file.txt user@example.com:/remote/directory` (copies file.txt to a remote directory)
+
+16. **df** - Display disk space usage.
+    - **Execution**: `df [options]`
+    - **Example**: `df -h` (displays disk space usage in human-readable format)
+
+17. **du** - Display disk usage of files and directories.
+    - **Execution**: `du [options] [directory]`
+    - **Example**: `du -sh Documents` (displays the disk usage of the Documents directory in a human-readable format)
+
+18. **ps** - Display process status.
+    - **Execution**: `ps [options]`
+    - **Example**: `ps aux` (displays information about all processes)
+
+19. **top** - Display and update sorted information about processes.
+    - **Execution**: `top`
+    - **Example**: `top` (displays dynamic information about processes)
+
+20. **uname** - Print system information.
+    - **Execution**: `uname [options]`
+    - **Example**: `uname -a` (displays all system information)
+
+
+
